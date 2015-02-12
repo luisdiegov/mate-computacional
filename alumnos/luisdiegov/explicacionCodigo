@@ -1,0 +1,16 @@
+for k = 1:6
+  x = linspace(0, 4*pi, 2^(k+1)+1);
+  subplot(3,2,k), plot(x, cos(3*x)-2*sin(x))
+end
+
+Este codigo hace 6 graficas de la misma funcion, pero cada vez
+graficando mas puntos conforme k va creciendo. 
+
+La funcion subplot(r,c,i) indica que se van a graficar r x c graficas
+en el mismo lugar, dividiendo el area en r filas y c columnas, siendo
+i el lugar de la matriz en donde se va a dibujar. Si se cambia el 2,3
+por un 3,2 entonces va a cambiar de 2 filas y 3 columnas a 3 filas
+y dos columnas.
+
+Si se quita la instrucccion axis, entonces octave ajusta el area en
+donde se muestra la grafica automaticamente.
